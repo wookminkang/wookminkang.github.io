@@ -73,6 +73,6 @@ jobs:
           aws-region: ap-northeast-2
       - name: Deploy static site to S3 bucket
         run: |
-          aws s3 sync .vitepress/dist s3://stonemwkang --delete
+          aws s3 sync docs/.vitepress/dist s3://stonemwkang --delete
 
  
