@@ -46,7 +46,6 @@ jobs:
         run: npm ci # 또는 pnpm install / yarn install / bun install
       - name: Build with VitePress
         run: npm run docs:build
-        working-directory: ./docs
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -74,6 +73,5 @@ jobs:
           aws-region: ap-northeast-2
       - name: Deploy static site to S3 bucket
         run: aws s3 sync .vitepress/dist s3://stonemwkang --delete
-        working-directory: ./docs
 
  
