@@ -174,7 +174,7 @@ const data = reactive({
 })
 </script>
 
-<style lang="scss">
+<style>
 .carousel {
       display: flex;
       overflow-x: auto;
