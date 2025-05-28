@@ -2,13 +2,13 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "mwkang blog",
+  title: "변`Team.im",
   description: "A VitePress Site",  
   base: '/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: '돌멩이집', link: '/' },
+      { text: '집', link: '/' },
       { text: '눌러봐', link: '/pages/crp' }
     ],
 
