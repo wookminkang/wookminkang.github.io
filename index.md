@@ -32,7 +32,7 @@ import { VPTeamMembers } from 'vitepress/theme'
 
 const members = [
   {
-    avatar: '/public/images/team/user_01.png',
+    avatar: '/images/team/user_01.png',
     name: '변민욱',
     title: 'Frontend Developer',
     desc: '돌멩이떼굴'
