@@ -61,11 +61,9 @@ jobs:
     runs-on: ubuntu-latest
     name: Deploy
     steps:
-      - name: Download artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: dist
-          path: .vitepress/dist
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
 
       # === AWS S3 배포를 위한 추가 부분 ===
       - name: Configure AWS credentials
