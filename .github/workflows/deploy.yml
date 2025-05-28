@@ -76,7 +76,10 @@ jobs:
         run: |
           aws s3 sync .vitepress/dist s3://${{ secrets.AWS_S3_BUCKET }} --delete
 
+      - name: Set CLOUDFRONT_DISTRIBUTION_ID env
+        run: echo "CLOUDFRONT_DISTRIBUTION_ID=${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}" >> $GITHUB_ENV
+
       - name: Invalidate CloudFront
-        if: ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }}
+        if: env.CLOUDFRONT_DISTRIBUTION_ID
         run: |
-          aws cloudfront create-invalidation --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
+          aws cloudfront create-invalidation --distribution-id ${{ env.CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
