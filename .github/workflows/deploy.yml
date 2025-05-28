@@ -45,11 +45,10 @@ jobs:
       - name: Install dependencies
         run: npm ci # 또는 pnpm install / yarn install / bun install
       - name: Build with VitePress
-        run: npm run docs:build
+        run: npm run docs:build # 또는 pnpm docs:build / yarn docs:build / bun run docs:build
       - name: Upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: dist
           path: .vitepress/dist
 
   # 배포 작업
@@ -72,7 +71,3 @@ jobs:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2
-      - name: Deploy static site to S3 bucket
-        run: aws s3 sync .vitepress/dist s3://stonemwkang --delete
-
- 
