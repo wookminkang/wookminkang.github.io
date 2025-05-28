@@ -1,10 +1,10 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-# hero:
-#   name: "mwkang blog"
-#   text: "내 닉네음은 돌멩이떼굴 🪨"
-#   tagline: 끄적... 끄적
+hero:
+  name: "mwkang blog"
+  text: "내 닉네음은 돌멩이떼굴 🪨"
+  tagline: 끄적... 끄적
 #   # actions:
 #   #   - theme: brand
 #   #     text: Markdown Examples
