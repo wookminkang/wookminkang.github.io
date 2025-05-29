@@ -37,7 +37,10 @@ const members = [
     avatar: '/images/team/user_04.png',
     name: '변희진',
     title: 'DevOps Engineer',
-    desc: '🥔 회오리감자'
+    desc: '🥔 회오리감자',
+
+    sponsor:'/pages/profile/user-04.html',
+    actionText: 'Click!'
   },
 ]
 </script>
