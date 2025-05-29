@@ -23,7 +23,18 @@ export default defineConfig({
               { text: 'CSR vs SSR', link: '/pages/crp-3' },
             ]
           }
-        ]
+        ],        
+      },
+      {
+        text: 'CI/CD',
+        items: [          
+          {
+            items: [
+              { text: 'CI/CD', link: '/pages/ci-cd' },
+              { text: 'AWS S3', link: '/pages/aws-s3' }
+            ]
+          }
+        ],  
       }
     ],
 
