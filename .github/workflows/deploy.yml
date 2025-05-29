@@ -38,25 +38,27 @@ jobs:
       - name: Build with VitePress
         run: npm run docs:build
 
+      - name: List dist folder contents
+        run: ls -la .vitepress/dist
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: .vitepress/dist
-          name: github-pages
+          artifact-name: github-pages   # ← artifact 이름 명시
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    needs: build
-    runs-on: ubuntu-latest
-    name: Deploy
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
-          name: github-pages
-          path: .vitepress/dist  # 👉 artifact를 이 폴더에 다운로드
+          name: github-pages   # ← upload-artifact 이름과 같아야 함
+          path: dist
 
       - name: Deploy to GitHub Pages
         id: deployment
@@ -71,4 +73,4 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync .vitepress/dist/ s3://stonemwkang/ --delete --no-progress
+          aws s3 sync dist s3://stonemwkang/ --delete --no-progress
