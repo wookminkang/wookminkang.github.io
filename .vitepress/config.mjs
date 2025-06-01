@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "변`Team.im",
+  title: "돌멩이떼굴떼굴",
   description: "A VitePress Site",  
   base: '/',
   themeConfig: {
