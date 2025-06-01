@@ -23,6 +23,7 @@ const members = [
 
     sponsor:'/pages/profile/user-01.html',
     actionText: 'Click!'
+  }
   // },{
   //   avatar: '/images/team/user_02.png',
   //   name: '변지나',
