@@ -26,6 +26,18 @@ export default defineConfig({
         ],        
       },
       {
+        text: '브라우저 저장소',
+        items: [          
+          {
+            items: [
+              { text: '로컬스토리지', link: '/pages/localStorage' },
+              { text: '세션스토리지', link: '/pages/sessionStorage' },
+              { text: '쿠키', link: '/pages/cookie' },
+            ]
+          }
+        ],        
+      },
+      {
         text: 'CI/CD',
         items: [          
           {
