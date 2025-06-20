@@ -14,6 +14,26 @@ export default defineConfig({
 
     sidebar: [
       {
+        text: 'Vue, Nuxt',
+        items: [          
+          {
+            items: [
+              { text: 'ref, reactive', link: '/pages/crp' },
+            ]
+          }
+        ],        
+      },
+      {
+        text: 'React, Next',
+        items: [          
+          {
+            items: [
+              { text: 'React Query', link: '/pages/react-query' },
+            ]
+          }
+        ],        
+      },
+      {
         text: '브라우저 랜더링',
         items: [          
           {
@@ -21,6 +41,8 @@ export default defineConfig({
               { text: '브라우저 렌더링 과정', link: '/pages/crp' },
               { text: '브라우저 렌더링 연계', link: '/pages/crp-2' },
               { text: 'CSR vs SSR', link: '/pages/crp-3' },
+              { text: 'Reflow *', link: '/pages/reflow' },
+              { text: 'Repaint *', link: '/pages/repaint' },
             ]
           }
         ],        

@@ -1,0 +1,15 @@
+/* .vitepress/theme/custom.css */
+:root {
+  --vp-c-brand-1: #4880EE;
+  --vp-c-brand-2: blue;
+
+
+  --vp-c-bg: #101012;
+  --vp-c-bg-alt: #17171B;
+  --vp-c-gray-soft: #17171B
+
+}
+
+.vp-doc h1{
+  color: #EDA54B
+}
