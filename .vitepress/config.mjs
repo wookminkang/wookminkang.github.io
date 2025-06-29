@@ -69,6 +69,22 @@ export default defineConfig({
             ]
           }
         ],  
+      },
+      {
+        text: '면접 공부',
+        items: [          
+          {
+            items: [
+              { text: '최적화 관련 내용', link: '/pages/interview-optimization' },
+              { text: '캐싱처리', link: '/pages/caching' },
+              { text: '메모제이션', link: '/pages/memoization' },
+              { text: '비동기컴포넌트', link: '/pages/async-component' },
+              { text: '네트워크 요청', link: '/pages/network-request' },
+              { text: 'SEO 최적화', link: '/pages/seo' },
+              { text: '이미지 압축', link: '/pages/image' },
+            ]
+          }
+        ],  
       }
     ],
 
