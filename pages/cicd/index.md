@@ -1,4 +1,4 @@
-name: VitePress 사이트를 Pages에 배포
+<!-- name: VitePress 사이트를 Pages에 배포
 
 on:
   push:
@@ -42,4 +42,4 @@ jobs:
 
       - name: Deploy to S3
         run: |
-          aws s3 sync .vitepress/dist/ s3://stonemwkang/ --delete --no-progress
+          aws s3 sync .vitepress/dist/ s3://stonemwkang/ --delete --no-progress -->
